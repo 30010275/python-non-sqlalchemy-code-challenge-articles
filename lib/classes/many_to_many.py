@@ -20,7 +20,6 @@ class Author:
     def topic_areas(self):
         return list(set(mag.category for mag in self.magazines())) or None
 
-
 class Magazine:
     all = []
 
@@ -46,7 +45,6 @@ class Magazine:
         authors = [article.author for article in self.articles()]
         return [author for author in set(authors) if authors.count(author) > 2] or None
 
-
 class Article:
     all = []
 
@@ -63,4 +61,3 @@ class Article:
     @property
     def title(self):
         return self._title
-12
